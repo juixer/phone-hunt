@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pastel">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-slate-200 pt-5">
+      <div class="navbar lg:px-56">
+        <div class="flex-1">
+          <a class="btn btn-ghost font-bold normal-case text-3xl"
+            >Hot <span class="text-indigo-500">Gadgets</span></a
+          >
+        </div>
+        <div class="flex-none gap-2">
+          <div class="space-x-3">
+            <button class="btn btn-info">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <h1 class="text-8xl mb-10 text-black font-extrabold">
+          Apple Iphone 13 Pro Max
+        </h1>
+        <p class="font-extralight mb-10 text-3xl text-slate-500">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected humou.
+        </p>
+        <button class="btn btn-info">Buy Now</button>
+      </div>
+      <div class="w-full">
+        <img src="./img/banner.png" alt="" class="mx-auto mt-20" />
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <!-- search bar -->
+      <section class="my-5 p-4">
+        <h1 class="text-6xl font-bold text-center">Search Your Phone</h1>
+        <div class="my-5 space-x-5">
+          <input id="search_box"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered input-info w-3/4"
+          />
+          <button onclick="showSearchMobile()" class="btn btn-info lg:w-56 md:w-36">Search</button>
+        </div>
+      </section>
+      <!-- LOADING -->
+      <section class="hidden " id="loading_container" >
+        <div class="text-center">
+            <span class=" loading loading-infinity loading-lg"></span>
+        </div>
+      </section>
+      <!-- content -->
+      <section class="my-5 p-4">
+        <div id="mobile_container" class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5">
+
+        </div>
+        <div class="text-center mt-10 hidden" id="show_btn_container">
+            <button onclick="showAll()" class="btn btn-accent">Show All</button>
+        </div>
+      </section>
+      <!-- MODAL -->
+      <section>
+            <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <h3 id="show_phone_name" class="font-bold text-lg">Hello!</h3>
+                <div id="all_details">
+
+                </div>
+                <div class="modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+                </div>
+            </form>
+            </dialog>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
